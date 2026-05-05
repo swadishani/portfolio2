@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+</head>
+
+<body class="scroll-smooth bg-slate-100 text-slate-800 dark:bg-slate-950 dark:text-white transition-colors duration-300">
+
+  <!-- Navbar -->
+  <nav class="flex flex-col md:flex-row justify-between items-center p-4 md:p-6 bg-white/90 dark:bg-slate-900/90 shadow-md sticky top-0 z-50 backdrop-blur-md">
+
+    <div class="text-2xl font-bold text-indigo-600 mb-3 md:mb-0">
+      MyPortfolio
+    </div>
+
+    <ul class="flex flex-wrap justify-center gap-4 md:gap-6 font-medium text-sm md:text-base">
+      <li><a href="#home" class="hover:text-indigo-500">Home</a></li>
+      <li><a href="#skills" class="hover:text-indigo-500">Skills</a></li>
+      <li><a href="#portfolio" class="hover:text-indigo-500">Portfolio</a></li>
+      <li><a href="#contact" class="hover:text-indigo-500">Contact</a></li>
+    </ul>
+
+    <button id="dark-mode-toggle"
+      class="mt-3 md:mt-0 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+      🌙
+    </button>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home"
+    class="flex flex-col-reverse md:flex-row items-center justify-center min-h-[80vh] bg-gradient-to-r from-indigo-700 via-green-700 to-slate-900 dark:from-slate-900 dark:via-gray-800 dark:to-black text-white px-4 md:px-8 gap-8 py-10">
+
+    <div class="md:w-1/2 text-center md:text-left space-y-5">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+        Hello, I'm <span class="text-yellow-300">Swechchha Nikhil</span>
+      </h1>
+
+      <p class="text-base md:text-lg text-gray-200">
+        I'm a Front-End Developer passionate about building beautiful and functional websites.
+      </p>
+
+      <a href="#contact"
+        class="inline-block bg-yellow-300 text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition">
+        Hire Me
+      </a>
+    </div>
+
+    <div class="md:w-1/2 flex justify-center">
+      <img src="/aksimage/swep.png"
+        class="w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full object-cover border-4 border-yellow-300 shadow-2xl">
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-10 max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-600">
+      My Skills
+    </h2>
+
+    <div class="space-y-5">
+
+      <div>
+        <h3 class="font-semibold mb-2">HTML</h3>
+        <div class="w-full bg-gray-300 rounded-full h-4 dark:bg-gray-700">
+          <div class="bg-indigo-500 h-4 rounded-full w-[95%]"></div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">CSS</h3>
+        <div class="w-full bg-gray-300 rounded-full h-4 dark:bg-gray-700">
+          <div class="bg-indigo-500 h-4 rounded-full w-[90%]"></div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">JavaScript</h3>
+        <div class="w-full bg-gray-300 rounded-full h-4 dark:bg-gray-700">
+          <div class="bg-indigo-500 h-4 rounded-full w-[85%]"></div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">React</h3>
+        <div class="w-full bg-gray-300 rounded-full h-4 dark:bg-gray-700">
+          <div class="bg-indigo-500 h-4 rounded-full w-[80%]"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-10 bg-gray-50 dark:bg-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-10">
+      Portfolio
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+
+      <div class="relative group overflow-hidden rounded-lg shadow-lg">
+        <img src="/aksimage/html.jpg"
+          class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition">
+          <h3 class="text-lg font-bold mb-2">Project 1</h3>
+          <p>HTML, CSS, JS</p>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-lg shadow-lg">
+        <img src="/aksimage/react.jpg"
+          class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition">
+          <h3 class="text-lg font-bold mb-2">Project 2</h3>
+          <p>React, CSS</p>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-lg shadow-lg">
+        <img src="/aksimage/js.avif"
+          class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition">
+          <h3 class="text-lg font-bold mb-2">Project 3</h3>
+          <p>JavaScript</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 max-w-2xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-600">
+      Contact Me
+    </h2>
+
+    <form class="space-y-4">
+      <input type="text" placeholder="Your Name"
+        class="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-slate-800 focus:outline-none">
+
+      <input type="email" placeholder="Your Email"
+        class="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-slate-800 focus:outline-none">
+
+      <textarea rows="5" placeholder="Your Message"
+        class="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-slate-800 focus:outline-none"></textarea>
+
+      <button
+        class="w-full bg-indigo-600 text-white py-3 rounded-lg font-bold hover:bg-indigo-700 transition">
+        Send Message
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="py-4 bg-white dark:bg-slate-900 text-black dark:text-white text-center shadow-lg transition-all duration-300">
+
+    <p class="text-sm md:text-base font-medium tracking-wide px-2">
+      &copy; 2026
+      <span class="font-bold text-blue-600 dark:text-yellow-400">
+        theSwechchhaNikhil
+      </span>
+      | All Rights Reserved.
+    </p>
+  </footer>
+
+  <!-- Dark Mode Script -->
+  <script>
+    const toggleBtn = document.getElementById('dark-mode-toggle');
+
+    toggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+
+      toggleBtn.textContent =
+        document.documentElement.classList.contains('dark')
+          ? '☀️'
+          : '🌙';
+    });
+  </script>
+
+</body>
+</html>
